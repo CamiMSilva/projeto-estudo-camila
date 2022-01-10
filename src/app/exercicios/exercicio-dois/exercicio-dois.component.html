@@ -1,0 +1,8 @@
+<!-- <h2 [class.maior-idade]="idade>=18">{{ idade }}</h2> -->
+<h2 [ngClass]="{'maior-idade': idade>=18, 'menor-idade': idade<18}">
+  {{ idade }}
+</h2>
+<button (click)="diminuir()">Diminuir</button>
+<span>{{ idade }}</span>
+<button (click)="aumentar()">Aumentar</button>
+<p *ngIf="idade>=18">Maior de idade!</p>
